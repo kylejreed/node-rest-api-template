@@ -3,6 +3,19 @@
   "include": ["src"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@types": [
+        "src/main.d.ts"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+    },
+    "esModuleInterop": true
   }
 }
